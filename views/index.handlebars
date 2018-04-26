@@ -1,0 +1,30 @@
+<section class="py-2">
+    <div class="row">
+        <div class="col-md-6 text-center">
+            <h1 class="display-2 mt-3 pt-5">
+                Web Development Ebook
+            </h1>
+            <p class="lead">Learn Development Front to Back</p>
+            <form action="/charge" method="POST">
+            <script
+                src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                data-key="{{stripePublishableKey}}"
+                data-amount="2500"
+                data-name="Web Development Ebook"
+                data-description="Ebook written by Machiavelli"
+                data-image="/img/marketplace.png"
+                data-locale="auto"
+                data-zip-code="true">
+            </script>
+            <script>
+                //Hide default Button
+                document.getElementsByClassName('stripe-button-el')[0].style.display = 'none';
+            </script>
+            <button type="submit" class="btn btn-outline-dark text-white btn-lg">Buy For 25$</button>
+        </form>
+        </div>
+        <div class="col-md-6">
+            <img src="/img/book.png" alt="" class="img-fluid">
+        </div>
+    </div>
+</section>
